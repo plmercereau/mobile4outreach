@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{rubric.name}}: {{category.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-grid text-center>
+      <ion-row>
+        <ion-col *ngFor="let dimension0 of rubric.dimensions[0]">
+          <ion-grid>
+            <ion-row><ion-col>{{dimension0.code}}</ion-col></ion-row>
+            <ion-row>
+              <ion-col *ngFor="let dimension1 of rubric.dimensions[1]">
+                {{dimension1.code}}
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col *ngFor="let x of data;let index = index;trackBy:trackByIndex;">
+          <button ion-button round full (click)="increment(index)">
+<!--<item [)]="data[index]" placeholder="item"></item>-->
+            {{x}}</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+</ion-content>

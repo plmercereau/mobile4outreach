@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Paramètres</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Paramètres</h3>
+  <ul>
+    <li>Login, déconnection -> si utilisateur non identifié, mettre aussi un lien sur accueil?</li>
+    <li>serveur "central" (paramétrage, aggrégations?)</li>
+    <li>langue</li>
+  </ul>
+  <p>Si on part sur du parametrage assez poussé - par exemple age par tranche ou age precis, mais sur de
+    nombreux cas - il sera intérssant de pouvoir avoir une liste de parametrages standard,
+    par exemple param ePool, param Masisi... Les paramêtres suivants devront à terme être gérés au niveau
+    central et déduits depuis l'utilisateur</p>
+  <ul>
+    <li>Mission</li>
+    <li>Projet</li>
+    <li>serveur "local" (données du registre, aggrégations?)</li>
+    <li>
+      Accès / saisie ou calcul /
+      <ul>
+        <li>Registre -> Accès ou non</li>
+        <li>Sommaire quotidien -> Acces = calculé ou modifiable. Si modifiable, bouton FAB d'import du calculé</li>
+        <li>Sommaire hebdo -> Acces = calculé (depuis le quotidien si existant ou directement du registre?) ou modifiable</li>
+        <li>Sommaire mensuel -> même logique</li>
+      </ul>
+    </li>
+    <li>De même, quid de l'aggrégation par lieu/zone géographique? Pour moi, ça doit rester automatique</li>
+    <li>
+      Programmes activés + parametres de ces programmes
+      <ul>
+        <li>
+          Général (=OPD?)
+          <ul>
+            <li>Age: 2 tranches (<5 et >=5), ou 3 tranches (<5 et 5-15 et >=15), ou années, ou date de naissance</li>
+          </ul>
+        </li>
+        <li>SRH</li>
+        <li>
+          Nutrition: intégré dans le général ou paramètres spécifiques?<br/>
+          Pour le MUAC: soit taille exacte, soit directement par catégorie de couleur
+        </li>
+        <li>Vaccination</li>
+        <li>Migrants</li>
+      </ul>
+    </li>
+  </ul>
+
+</ion-content>

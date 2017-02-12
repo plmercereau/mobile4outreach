@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sommaire du 8 janvier 2017</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+
+
+    <ion-segment [(ngModel)]="selectedSegment">
+      <ion-segment-button *ngFor="let item of summary_programs"
+                          (click)="showSegment(item.code)"
+                          [value]="item.code">
+        {{item.name}}
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--<ion-fab bottom right>-->
+    <!--<button ion-fab color="primary" icon-only (click)="pushEditSummary()">-->
+      <!--<ion-icon name="create"></ion-icon>-->
+    <!--</button>-->
+  <!--</ion-fab>-->
+
+  <div>
+    <ion-list *ngFor="let itemx of summary_programs"
+              [hidden]="hideSegment(selectedSegment,itemx.code)">
+      <ion-item-group *ngFor="let rubric of itemx.rubrics">
+        <ion-item-divider sticky>
+          <ion-label no-margin>
+            <ion-grid no-padding text-center>
+              <ion-row>
+                <ion-col text-left width-50 wrap center>{{rubric.name}}</ion-col>
+                <ion-col *ngFor="let dimension0 of rubric.dimensions[0]">
+                  <ion-grid>
+                    <ion-row><ion-col>{{dimension0.code}}</ion-col></ion-row>
+                    <ion-row>
+                      <ion-col *ngFor="let dimension1 of rubric.dimensions[1]">
+                        {{dimension1.code}}
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-label>
+        </ion-item-divider>
+        <ion-item *ngFor="let category of rubric.categories" (click)="pushViewCategory(category,rubric)">
+          <ion-grid text-center>
+            <ion-row>
+              <ion-col text-left width-50 wrap>{{category.name}}</ion-col>
+              <ion-col *ngFor="let dataEntity of getDataFromCategoryCode(category.code)">
+                {{dataEntity}}
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+
+      </ion-item-group>
+    </ion-list>
+  </div>
+
+</ion-content>

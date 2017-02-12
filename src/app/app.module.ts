@@ -16,6 +16,12 @@ import { VerificationPage } from '../pages/verification/verification';
 import { PhoneService } from '../services/phone';
 import { PictureService } from '../services/picture';
 import { MyApp } from './app.component';
+import {HomePage} from "../pages/home/home";
+import {SummaryPage} from "../pages/summary/summary";
+import {RegisterPage} from "../pages/register/register";
+import {SettingsPage} from "../pages/settings/settings";
+import {NewEventPage} from "../pages/new-event/new-event";
+import {CategoryPage} from "../pages/category/category";
 
 @NgModule({
   declarations: [
@@ -30,7 +36,13 @@ import { MyApp } from './app.component';
     MessagesOptionsComponent,
     MessagesAttachmentsComponent,
     NewLocationMessageComponent,
-    ShowPictureComponent
+    ShowPictureComponent,
+    HomePage,
+    SummaryPage,
+    RegisterPage,
+    SettingsPage,
+    NewEventPage,
+    CategoryPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -52,7 +64,13 @@ import { MyApp } from './app.component';
     MessagesOptionsComponent,
     MessagesAttachmentsComponent,
     NewLocationMessageComponent,
-    ShowPictureComponent
+    ShowPictureComponent,
+    HomePage,
+    SummaryPage,
+    RegisterPage,
+    SettingsPage,
+    NewEventPage,
+    CategoryPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

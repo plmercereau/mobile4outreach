@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Accueil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Page d'accueil</h3>
+  <ion-list>
+    <!-- <ion-list-header>
+      Date
+    </ion-list-header>-->
+    <ion-item>
+      <ion-label>Date</ion-label><!-- TODO mettre un module avec un calendrier plus simple -->
+      <ion-datetime></ion-datetime>
+    </ion-item>
+    <!--<ion-list-header>
+      Localisation
+    </ion-list-header>-->
+    <ion-item>
+      <ion-label>Province</ion-label>
+      <ion-select [(ngModel)]="province">
+        <ion-option value="Bandundu">Bandundu</ion-option>
+        <ion-option value="Bas-Congo">Bas-Congo</ion-option>
+        <ion-option value="Équateur">Équateur</ion-option>
+        <ion-option value="Kasaï-Occidental">Kasaï-Occidental</ion-option>
+        <ion-option value="Kasaï-Oriental">Kasaï-Oriental</ion-option>
+        <ion-option value="Katanga">Katanga</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>District</ion-label>
+      <ion-select [(ngModel)]="district">
+        <ion-option value="Bas-Fleuve">Bas-Fleuve</ion-option>
+        <ion-option value="Cataractes">Cataractes</ion-option>
+        <ion-option value="Lukaya">Lukaya</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Localité</ion-label>
+      <ion-select [(ngModel)]="localite">
+        <ion-option value="Lukula">Lukula</ion-option>
+        <ion-option value="Seke-Banza">Seke-Banza</ion-option>
+        <ion-option value="Tshela">Tshela</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      Total population
+    </ion-item>
+    <ion-item>
+      Total HH (?)
+    </ion-item>
+    <ion-item>
+      Nb Consultants
+    </ion-item>
+  </ion-list>
+
+  <ul>
+    <li>lien vers le registre</li>
+    <li>nombre de consultants -> se retransmet dans le sommaire</li>
+    <li>lien vers </li>
+  </ul>
+  <p>Mettre ici le choix du lieu et de la date, les liens vers le registre et le recap,
+    peut-être l'action de synchronisation, le tout avec des explications archi succintes.
+    Bien faire la disinction avec les options de paramétrage.
+  </p>
+<p>Le pays doit être mis dans les paramètres</p>
+  <button ion-button secondary menuToggle>Afficher le menu</button>
+</ion-content>
