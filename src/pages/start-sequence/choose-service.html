@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Choose service</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  previous consultations:
+  <button ion-button block color="secondary" (click)="selectSRH()">
+    ANC/PNC (last visit: 13/02/2017)
+  </button>
+
+  Additional services:
+  <button [hidden]="true" ion-button block (click)="selectSRH()">
+    ANC/PNC
+  </button>
+  <button ion-button block (click)="selectFP()">
+    Delivery
+  </button>
+  <button ion-button block (click)="selectFP()">
+    Neonatal check
+  </button>
+  <button ion-button block (click)="selectFP()">
+    FP
+  </button>
+  <button ion-button block (click)="selectFP()">
+    SGBV
+  </button>
+  <button ion-button block (click)="void()">
+    Minor wound or dressing
+  </button>
+  <button ion-button block (click)="void()">
+    General consultation (adult or paediatrics)
+  </button>
+  <button ion-button block (click)="void()">
+    General consultation (adult)
+  </button>
+  <button ion-button block (click)="void()">
+    General consultation (paediatrics)
+  </button>
+  <button ion-button block (click)="selectNutrition()">
+    Nutrition
+  </button>
+  <button ion-button block (click)="void()">
+    Vaccination
+  </button>
+  <button ion-button block (click)="void()">
+    Mental Health
+  </button>
+  <!--TODO hide/disable when not possible (e.g. SRH for a male patient)-->
+  <!--TODO pass when the clinician configured only one service -> directly jump into the only service-->
+  <!--TODO another color for pre-selected type of consultation done by triage staff? Or pass?-->
+  <!--TODO another color for planned visit?-->
+</ion-content>

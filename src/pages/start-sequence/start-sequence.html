@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nouvel enregistrement</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block  (click)="getTriageStack()">
+    From triage
+  </button>
+  <button ion-button block  (click)="firstVisit()">
+    First visit
+  </button>
+  <button ion-button block  (click)="searchPatient()">
+    Already came
+  </button>
+<!--TODO trouver un moyen de vérifier la présence d'un triage.  -->
+</ion-content>

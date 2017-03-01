@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>New patient</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides pager>
+    <ion-slide>
+      Name / phone / email
+    </ion-slide>
+    <ion-slide>
+      Origin (address)
+    </ion-slide>
+    <ion-slide>
+      Gender
+    </ion-slide>
+    <ion-slide>
+      Age / DoB
+    </ion-slide>
+    <ion-slide>
+      Recap?<br/>
+      Liste des services possibles (si triage)
+      <button ion-button (click)="addPatient()">Add</button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

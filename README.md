@@ -9,7 +9,6 @@ $ npm install -g meteor-client-bundler
  $ meteor npm install sharp
  $ npm install
  $ npm run meteor-client:bundle
- $ ionic serve
 ```
 ### How to run the servers
 First, the meteor server:

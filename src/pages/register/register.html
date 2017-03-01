@@ -5,25 +5,44 @@
     </button>
     <ion-title>Registre</ion-title>
   </ion-navbar>
+  <ion-toolbar>
+    <!--TODO utiliser un nbMmodel pour récupérer les différents programmes -> Cf page summary-->
+    <ion-segment>
+      <ion-segment-button >All</ion-segment-button>
+      <ion-segment-button>PHC</ion-segment-button>
+      <ion-segment-button>ANC/PNC</ion-segment-button>
+      <ion-segment-button>FP</ion-segment-button>
+      <ion-segment-button>Nutrition</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-fab bottom right>
-    <button ion-fab color="primary" icon-only (click)="pushNewEvent()">
+    <button ion-fab color="primary" icon-only (click)="pushStartSequence()">
       <ion-icon name="add"></ion-icon>
     </button>
   </ion-fab>
 
   <ion-list>
+    <ion-item-divider sticky>
+      <ion-list-header>
+        <ion-row>
+          <ion-col>Date</ion-col>
+          <ion-col>NC/FU</ion-col>
+          <ion-col>Morbidity</ion-col>
+        </ion-row>
+      </ion-list-header>
+    </ion-item-divider>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon name="sync" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
+      <ion-row>
+        <ion-col>{{item.date | date: 'dd/MM/yyyy'}}</ion-col>
+        <ion-col>{{item.type}}</ion-col>
+        <ion-col>{{item.morbidity}}</ion-col>
+      </ion-row>
     </button>
   </ion-list>
   <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
+    You navigated here from <b>{{selectedItem.date}}</b>
   </div>
 </ion-content>

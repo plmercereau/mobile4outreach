@@ -20,8 +20,12 @@ import {HomePage} from "../pages/home/home";
 import {SummaryPage} from "../pages/summary/summary";
 import {RegisterPage} from "../pages/register/register";
 import {SettingsPage} from "../pages/settings/settings";
-import {NewEventPage} from "../pages/new-event/new-event";
+import {StartSequencePage} from "../pages/start-sequence/start-sequence";
 import {CategoryPage} from "../pages/category/category";
+import {SearchPatientPage} from "../pages/start-sequence/search-patient";
+import {NewPatientPage} from "../pages/start-sequence/new-patient";
+import {NewEventEndPage} from "../pages/start-sequence/services/new-event-end";
+import {ChooseServicePage} from "../pages/start-sequence/choose-service";
 
 @NgModule({
   declarations: [
@@ -41,8 +45,12 @@ import {CategoryPage} from "../pages/category/category";
     SummaryPage,
     RegisterPage,
     SettingsPage,
-    NewEventPage,
-    CategoryPage
+    StartSequencePage,
+    CategoryPage,
+    SearchPatientPage,
+    NewPatientPage,
+    NewEventEndPage,
+    ChooseServicePage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -69,8 +77,12 @@ import {CategoryPage} from "../pages/category/category";
     SummaryPage,
     RegisterPage,
     SettingsPage,
-    NewEventPage,
-    CategoryPage
+    StartSequencePage,
+    CategoryPage,
+    SearchPatientPage,
+    NewPatientPage,
+    NewEventEndPage,
+    ChooseServicePage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
